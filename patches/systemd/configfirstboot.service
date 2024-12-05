@@ -1,0 +1,17 @@
+[Unit]
+Description=Hardware setup and cluster node ID
+# ConditionFirstBoot=yes
+Before=basic.target
+After=local-fs.target sysinit.target
+DefaultDependencies=no
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/configSystem.sh
+StandardInput=tty
+StandardOutput=tty
+TTYPath=/dev/ttyS0
+TTYReset=yes
+
+[Install]
+WantedBy=multi-user.target

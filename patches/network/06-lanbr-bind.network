@@ -1,0 +1,5 @@
+[Match]
+Name=lan1 lan2 lan3 wan
+
+[Network]
+Bridge=lanbr0

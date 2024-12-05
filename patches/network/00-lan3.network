@@ -1,0 +1,7 @@
+[Match]
+Name=lan3
+
+[Network]
+VLAN=lan3.100
+ConfigureWithoutCarrier=true
+

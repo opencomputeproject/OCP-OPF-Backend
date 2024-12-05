@@ -1,0 +1,6 @@
+[NetDev]
+Name=wan.100
+Kind=vlan
+
+[VLAN]
+Id=100

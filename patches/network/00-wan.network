@@ -1,0 +1,7 @@
+[Match]
+Name=wan
+
+[Network]
+VLAN=wan.100
+ConfigureWithoutCarrier=true
+
