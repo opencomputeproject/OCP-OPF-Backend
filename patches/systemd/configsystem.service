@@ -1,0 +1,10 @@
+[Unit]
+Description=Configure network and storage before keepalived is launched
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/bin/bash -c 'exec configPreBoot.sh'
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,6 @@
+[NetDev]
+Name=lan2.100
+Kind=vlan
+
+[VLAN]
+Id=100

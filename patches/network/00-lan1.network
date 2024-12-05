@@ -1,0 +1,6 @@
+[Match]
+Name=lan1
+
+[Network]
+VLAN=lan1.100
+ConfigureWithoutCarrier=true
