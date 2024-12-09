@@ -48,5 +48,3 @@ On any supported clients (currently HPE Proliant Gen11 machines and initial Gen1
 - setenv loadaddr 0x50000000
 - setenv vlan 100
 - Then issue a dhcp and bootm command.
-
-
