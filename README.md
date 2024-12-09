@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This repository contains proof of concept of an automated firmware distribution stack. The primary goal is to centralize all firmware in one place, and starts clients machines from it. For that purpose we start from the BMC which boots by issuing a DHCP/TFTP boot request (using VLAN) retrieve a FIT image and mount from the network a block storage area. Then following firmware are cascaded based on hardware discovery performed by the BMC (ROM, PCIe end points etc ...)   
+This repository contains proof of concept of an automated firmware distribution stack. The primary goal is to centralize all firmware in one place, and start clients machines from it. For that purpose we start from the BMC which boots by issuing a DHCP/TFTP boot request (using VLAN) retrieve a FIT image and mount from the network a block storage area. Then following firmware are cascaded based on hardware discovery performed by the BMC (ROM, PCIe end points etc ...)   
 
 ## Build and supported hardware
 
@@ -28,7 +28,7 @@ dd if=bpi-r4_jammy_6.8.0 of=/dev/rdisk2 bs=1M status=progress
 
 Insert the SD card into the Bananapi-R4 and boot it.
 Watch for the boot process and answer the configuration questions
-- Cluser node number must be set to 1 into a standalone configuration or 1/2 into a clustering mode (please read the wiki as documentation)
+- Cluster node number must be set to 1 into a standalone configuration or 1/2 into a clustering mode (please read the wiki as documentation)
 - Http proxy must be specified if your network requires a proxy
 
 ## Limitations
