@@ -12,7 +12,7 @@ The build script is currently supporting a single hardware target platform which
 
 The build system is expected to be an x86 64 bits linux machine based on debian or ubuntu (ideally jammy). It will cross compile for the target and the build will:
 - Build a fix kernel version (6.8)
-- Grab a u-boot pre-built image from ttps://github.com/frank-w/
+- Grab a u-boot pre-built image from https://github.com/frank-w/
 - Build a rootfs
   - Install the Firmware services related patches to the rootfs
 - Assemble an SD image
@@ -43,7 +43,7 @@ After initial boot the switch needs to have a default firmware image to serve (a
 
 ## client setup
 
-On any supported clients (currently HPE Proliant Gen11 machines and initial Gen12 DL320/DL340) setup the u-boot environment to boot from the bananapi-r4 by connecting the iLO ethernet adatper to it and set these environment variables
+On any supported clients (currently HPE Proliant Gen11 machines and initial Gen12 DL320/DL340) setup the u-boot environment to boot from the bananapi-r4 by connecting the iLO ethernet adapter to it and set these environment variables
 
 - setenv loadaddr 0x50000000
 - setenv vlan 100
