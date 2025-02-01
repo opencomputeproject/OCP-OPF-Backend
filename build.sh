@@ -8,7 +8,6 @@ rm 6.8-dango.zip
 sudo apt install debootstrap
 sudo apt -y install binutils-aarch64-linux-gnu
 sudo apt -y install ccache u-boot-tools libncurses5-dev gcc-aarch64-linux-gnu cpp-aarch64-linux-gnu qemu-user-static qemu-system-arm qemu-utils
-sudo apt -y install libncurses5-dev
 
 sudo rm -rf BPI-Router-Linux BPI-Router-Images
 wget https://github.com/frank-w/BPI-Router-Linux/archive/refs/heads/6.8-dango.zip
@@ -30,6 +29,9 @@ then
 fi
 echo "import configuration"
 ls -lta
+# update for ubuntu 24.04 build which doesn't support ncurses5
+cat ./build.sh | sed 's/libncurses5-dev/libncurses-dev/' > /tmp/build.sh
+cp /tmp/build.sh ./build.sh
 ./build.sh importconfig
 ./build.sh <<EOF
 1
