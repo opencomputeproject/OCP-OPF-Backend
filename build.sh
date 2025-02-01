@@ -8,7 +8,7 @@ rm 6.8-dango.zip
 sudo apt -y install debootstrap
 sudo apt -y install binutils-aarch64-linux-gnu binfmt-support
 sudo apt -y install ccache u-boot-tools libncurses5-dev gcc-aarch64-linux-gnu cpp-aarch64-linux-gnu qemu-user-static qemu-system-arm qemu-utils
-sudo apt -y install libncurses5-dev
+sudo apt -y install libncurses5-dev libncurses5
 
 sudo rm -rf BPI-Router-Linux BPI-Router-Images
 wget https://github.com/frank-w/BPI-Router-Linux/archive/refs/heads/6.8-dango.zip
@@ -45,6 +45,7 @@ else
 	mv SD/bpi-r4_6.8.0-rc3master.tar.gz SD/bpi-r4_6.8.0-rc3-dango.tar.gz
 	mv SD/bpi-r4_6.8.0-rc3master.tar.gz.md5 SD/bpi-r4_6.8.0-rc3-dango.tar.gz.md5
 fi
+exit 0
 rm -rf main.zip
 rm -rf BPI-Router-Images
 wget https://github.com/frank-w/BPI-Router-Images/archive/refs/heads/main.zip
