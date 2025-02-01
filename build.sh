@@ -5,8 +5,8 @@
 
 rm -f ./SD/*.gz
 rm 6.8-dango.zip
-sudo apt install debootstrap
-sudo apt -y install binutils-aarch64-linux-gnu
+sudo apt -y install debootstrap
+sudo apt -y install binutils-aarch64-linux-gnu binfmt-support
 sudo apt -y install ccache u-boot-tools libncurses5-dev gcc-aarch64-linux-gnu cpp-aarch64-linux-gnu qemu-user-static qemu-system-arm qemu-utils
 
 sudo rm -rf BPI-Router-Linux BPI-Router-Images
