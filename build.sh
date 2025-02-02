@@ -42,8 +42,8 @@ then
 	mv SD/bpi-r4_6.8.0-rc3main.tar.gz SD/bpi-r4_6.8.0-rc3-dango.tar.gz
 	mv SD/bpi-r4_6.8.0-rc3main.tar.gz.md5 SD/bpi-r4_6.8.0-rc3-dango.tar.gz.md5
 else
-	mv SD/bpi-r4_6.8.0-rc3master.tar.gz SD/bpi-r4_6.8.0-rc3-dango.tar.gz
-	mv SD/bpi-r4_6.8.0-rc3master.tar.gz.md5 SD/bpi-r4_6.8.0-rc3-dango.tar.gz.md5
+	mv SD/bpi-r4_6.8.0-rc3*.tar.gz SD/bpi-r4_6.8.0-rc3-dango.tar.gz
+	mv SD/bpi-r4_6.8.0-rc3*.tar.gz.md5 SD/bpi-r4_6.8.0-rc3-dango.tar.gz.md5
 fi
 rm -rf main.zip
 rm -rf BPI-Router-Images
