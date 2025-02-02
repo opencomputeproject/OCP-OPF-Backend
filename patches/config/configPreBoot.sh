@@ -52,6 +52,8 @@ echo 1 > /proc/sys/net/ipv4/conf/all/arp_announce
 echo 1 > /proc/sys/net/ipv4/conf/all/proxy_arp
 echo 1 > /proc/sys/net/ipv4/conf/all/proxy_arp_pvlan
 echo 1 > /proc/sys/net/ipv4/conf/all/forwarding
+# Do not send redirect, we are in Host mode , not Router mode
+echo 0 > /proc/sys/net/ipv4/conf/all/send_redirects
 
 ifconfig eth1 up
 ifconfig eth2 up
