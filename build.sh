@@ -28,6 +28,8 @@ then
         git commit -m "initial input"
 fi
 echo "import configuration"
+
+# update for ubuntu 24.04 build which doesn't support ncurses5
 cat ./build.sh | sed 's/libncurses5-dev/libncurses-dev/' > /tmp/build.sh
 cp /tmp/build.sh ./build.sh
 ./build.sh importconfig
