@@ -22,13 +22,14 @@ ramdisksize=4G
 #sudo apt install debootstrap qemu-user-static
 function checkpkg(){
 	echo "checking for needed packages..."
-	for pkg in debootstrap qemu-arm-static qemu-aarch64-static; do
-		which $pkg >/dev/null;
-		if [[ $? -ne 0 ]];then
-			echo "$pkg missing";
-			exit 1;
-		fi;
-	done
+# we build natively so no need to check for qemu anymore
+#	for pkg in debootstrap qemu-arm-static qemu-aarch64-static; do
+#		which $pkg >/dev/null;
+#		if [[ $? -ne 0 ]];then
+#			echo "$pkg missing";
+#			exit 1;
+#		fi;
+#	done
 }
 
 checkpkg
@@ -89,8 +90,9 @@ case "$arch" in
 	;;
 	"arm64")
 	#for r64 use
-		sudo cp /usr/bin/qemu-aarch64-static $targetdir/usr/bin/
-		sudo cp ../../qemu/qemu-5.0.0/build/aarch64-linux-user/qemu-aarch64  $targetdir/usr/bin/qemu-aarch64-static
+	# We build natively no need to install qemu anymore
+	#	sudo cp /usr/bin/qemu-aarch64-static $targetdir/usr/bin/
+	#	sudo cp ../../qemu/qemu-5.0.0/build/aarch64-linux-user/qemu-aarch64  $targetdir/usr/bin/qemu-aarch64-static
 	;;
 	"amd64")
 		;;

@@ -7,7 +7,7 @@ rm -f ./SD/*.gz
 rm 6.8-dango.zip
 sudo apt install debootstrap
 sudo apt -y install binutils-aarch64-linux-gnu
-sudo apt -y install ccache u-boot-tools libncurses5-dev gcc-aarch64-linux-gnu cpp-aarch64-linux-gnu qemu-user-static qemu-system-arm qemu-utils
+sudo apt -y install ccache u-boot-tools libncurses5-dev qemu-user-static qemu-system-arm qemu-utils
 
 sudo rm -rf BPI-Router-Linux BPI-Router-Images
 wget https://github.com/frank-w/BPI-Router-Linux/archive/refs/heads/6.8-dango.zip
@@ -28,7 +28,7 @@ then
         git commit -m "initial input"
 fi
 echo "import configuration"
-ls -lta
+
 # update for ubuntu 24.04 build which doesn't support ncurses5
 cat ./build.sh | sed 's/libncurses5-dev/libncurses-dev/' > /tmp/build.sh
 cp /tmp/build.sh ./build.sh
@@ -44,8 +44,8 @@ then
 	mv SD/bpi-r4_6.8.0-rc3main.tar.gz SD/bpi-r4_6.8.0-rc3-dango.tar.gz
 	mv SD/bpi-r4_6.8.0-rc3main.tar.gz.md5 SD/bpi-r4_6.8.0-rc3-dango.tar.gz.md5
 else
-	mv SD/bpi-r4_6.8.0-rc3master.tar.gz SD/bpi-r4_6.8.0-rc3-dango.tar.gz
-	mv SD/bpi-r4_6.8.0-rc3master.tar.gz.md5 SD/bpi-r4_6.8.0-rc3-dango.tar.gz.md5
+	mv SD/bpi-r4_6.8.0-rc3*.tar.gz SD/bpi-r4_6.8.0-rc3-dango.tar.gz
+	mv SD/bpi-r4_6.8.0-rc3*.tar.gz.md5 SD/bpi-r4_6.8.0-rc3-dango.tar.gz.md5
 fi
 rm -rf main.zip
 rm -rf BPI-Router-Images
