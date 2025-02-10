@@ -161,6 +161,7 @@ sudo chroot $targetdir bash -c "apt update; apt install --no-install-recommends 
 sudo chroot $targetdir bash -c "apt update; apt install --no-install-recommends -y wget"
 sudo chroot $targetdir bash -c "apt update; apt install --no-install-recommends -y gunzip"
 sudo chroot $targetdir bash -c "apt update; apt install --no-install-recommends -y fdisk"
+sudo chroot $targetdir bash -c "apt update; apt install --no-install-recommends -y build-essential cmake git libjson-c-dev libwebsockets-dev"
 sudo chroot $targetdir bash -c "apt update; apt install --no-install-recommends -y nfs-kernel-server"
 sudo chroot $targetdir bash -c "apt update; apt install -y build-essential cmake git libjson-c-dev libwebsockets-dev"
 sudo chroot $targetdir bash -c "cd /root; git clone https://github.com/tsl0922/ttyd"
