@@ -1,4 +1,6 @@
 #!/bin/bash
+# turn off kwown hosts hashing
+sed -i '/^    HashKnownHosts/s/ yes/ no/' /etc/ssh/ssh_config
 # We must set the Mac from the usable networking port
 if [ ! -d "/var/switch" ]
 then
