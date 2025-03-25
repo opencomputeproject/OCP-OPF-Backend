@@ -1,4 +1,6 @@
 #!/bin/bash
+#disable known_hosts hashing
+sed -i '/^[[:blank:]]*HashKnownHosts/s/ yes/ no/' /etc/ssh/ssh_config
 # We must set the Mac from the usable networking port
 if [ ! -d "/var/switch" ]
 then
